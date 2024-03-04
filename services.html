@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Animated Services Section Design Using HTML And CSS</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+          * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+      
+
+        .left {
+            font-size: 1.5rem;
+        }
+        #services-section {
+            background: #f1f1f1;
+            padding: 30px 0px;
+            min-height: 100vh;
+            background-image: url("https://res.cloudinary.com/jerrick/image/upload/v1627943514/6108725ad9e5c6001f1338aa.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+        }
+
+        .section-title {
+            color: #fff;
+            font-size: 44px;
+            font-weight: 700;
+        }
+
+        .section-title span {
+            color: blue;
+        }
+
+        .service-wrap {
+            position: relative;
+            background: white;
+            overflow: hidden;
+            padding: 67px 40px 64px;
+            margin: 10px 5px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .service-wrap::after {
+            content: "";
+            position: absolute;
+            background: blue;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: -100%;
+            z-index: -1;
+            transition: all .5s;
+        }
+
+        .service-wrap:hover::after {
+            top: 0px;
+        }
+
+        .service-wrap i {
+            position: relative;
+            background: blue;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: white;
+            font-size: 60px;
+            line-height: 100px;
+            margin-bottom: 30px;
+            z-index: 1;
+            transition: all .5s;
+        }
+
+        .service-wrap i::after {
+            content: "";
+            position: absolute;
+            border: 2px solid blue;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            left: -10px;
+            top: -10px;
+            transition: all .5s;
+        }
+
+        .service-wrap i,
+        .service-wrap h4,
+        .service-wrap p {
+            transition: all .5s;
+        }
+
+        .service-wrap:hover i,
+        .service-wrap:hover h4,
+        .service-wrap:hover p {
+            color: white;
+        }
+
+        .service-wrap:hover i::after {
+            border-color: white;
+        }
+
+        .service-wrap:hover i {
+            background-color: white;
+            color: blue;
+        }
+
+        .service-wrap p {
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sarita's Portfolio </div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About3.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Resume2.html">Resume</a></li>
+                    <li><a href="contact.html">contact me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="services-section" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="section-title py-5">Our <span>Services</span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-wrap">
+                        <i class="fas fa-laptop"></i>
+                        <h4>Web Design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-wrap">
+                        <i class="fas fa-code"></i>
+                        <h4>Web Development</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="service-wrap">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Responsive Design</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
